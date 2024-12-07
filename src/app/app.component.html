@@ -1,0 +1,59 @@
+<mat-toolbar class="custom-toolbar"> 
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="container">
+  <h1 class="titre"><nav><a routerLink="/home">{{title}}</a></nav></h1>
+  <!---
+  <mat-slide-toggle color="primary" (click)="login()">Login</mat-slide-toggle>-->
+  </div>
+  <span class="spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>home</mat-icon>
+  </button>
+  <a mat-button at-fab extended *ngIf="!isAdmin()" href="/connexion">Connexion</a>
+  <!-- affiché le texte "connecté" si on est connecté-->
+  <H2 *ngIf="isAdmin()">Connecté</H2>
+  <button mat-strocked_button color="primary" *ngIf="isAdmin()" (click)="deconnexion()">
+    Déconnexion
+</button>
+
+
+<button mat-raised-button color="primary" (click)="peuplerBD()">Peupler la Base de Données</button>
+
+
+   
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [opened]="opened">
+    <mat-nav-list>
+      <a mat-list-item href="/liste-devoirs">Liste des devoirs</a>
+      <a mat-list-item href="/ajout-devoir">Ajout d'un devoir</a>
+      <a mat-list-item href="/modification-devoir">Modification d'un devoir</a>
+      <a mat-list-item href="/suppression-devoir">Suppression d'un devoir</a>
+      <a mat-list-item href="/generation-test">Génération de données de test</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  
+
+
+    <mat-sidenav-content>
+    <router-outlet></router-outlet> <!-- Affiche le contenu selon la route -->
+    <!-- <app-assignments></app-assignments> -->
+
+    <!--
+    <button mat-button>Click</button>
+    <button mat-fab extended> Bonjour !!!!</button>
+    <button mat-raised-button> Bonjour 2!!!!</button>-->
+  </mat-sidenav-content>
+  
+</mat-sidenav-container>
+
+
+
+
+
+
+  

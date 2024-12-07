@@ -1,0 +1,56 @@
+<!-- <p *ngIf="assignementTransmis">{{assignementTransmis.nom}}</p>
+
+@if (assignementTransmis) {
+        <mat-card>
+
+                <mat-card-title>{{assignementTransmis.nom}}</mat-card-title>
+                <mat-card-subtitle>{{assignementTransmis.dateDeRendu| date: 'dd/MM/yyy'}}</mat-card-subtitle>
+                <mat-checkbox *ngIf="!assignementTransmis.rendu"
+                (click)="onAssignmentRendu()">Devoir rendu</mat-checkbox>
+                <button mat-strocked_button color="primary" (click)="onClickEdit()" [disabled]="!isAdmin()">
+                        Edit
+                </button>
+        </mat-card>
+}
+
+
+<mat-card-actions id="bottom">
+        
+        @if(!assignementTransmis.rendu){
+                <mat-checkbox (click)="onAssignmentRendu()">Devoir rendu</mat-checkbox>
+        
+} 
+        <button mat-flat-button color="warn" (click)="OnDelete()" [disabled]="!isAdmin()">DELETE ME</button>
+</mat-card-actions> -->
+
+
+<mat-card>
+        <mat-card-title>{{assignementTransmis.nom}}</mat-card-title>
+        <mat-card-subtitle>{{assignementTransmis.dateDeRendu | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+        
+        <!-- Checkbox toujours activable -->
+        <mat-checkbox 
+            *ngIf="!assignementTransmis.rendu" 
+            (click)="onAssignmentRendu()">Devoir rendu
+        </mat-checkbox>
+    
+        <!-- Bouton Edit désactivé si l'utilisateur n'est pas administrateur -->
+        <button 
+            mat-strocked_button 
+            color="primary" 
+            (click)="onClickEdit()" 
+            [disabled]="!isAdmin()">Edit
+        </button>
+    </mat-card>
+    
+    <mat-card-actions id="bottom">
+        <!-- Bouton Delete désactivé si l'utilisateur n'est pas administrateur -->
+        <button 
+            mat-flat-button 
+            color="warn" 
+            (click)="OnDelete()" 
+            [disabled]="!isAdmin()">DELETE ME
+        </button>
+    </mat-card-actions>
+    
+    

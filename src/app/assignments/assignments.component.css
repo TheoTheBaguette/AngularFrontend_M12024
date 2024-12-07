@@ -1,0 +1,145 @@
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px; /* Largeur maximale */
+    margin: 20px auto; /* Centrage horizontal avec espacement vertical */
+    padding: 10px;
+    background: #ffffff; /* Arrière-plan blanc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);    
+}
+
+.ajouterBtn {
+    align-self: flex-end;
+    background-color: #6200ea; 
+    color: #fff; 
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ajouterBtn:hover {
+    background-color: #3700b3; /* Violet plus foncé au survol */
+}
+
+/* Liste des assignments */
+.assignment-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none; /* Supprime les puces */
+    border-top: 2px solid #ddd; 
+}
+
+.assignment-item {
+    padding: 15px 20px;
+    background: #fafafa; /* Gris très clair */
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease, transform 0.2s ease;
+    border-radius: 5px; /* Coins légèrement arrondis */
+}
+
+.assignment-item:hover {
+    background: #e0f7fa; /* Bleu clair au survol */
+    transform: scale(1.02); /* Légère mise en avant */
+    cursor: pointer;
+}
+
+/* Texte pour les devoirs rendus et non rendus */
+.rendu {
+    color: #388e3c; /* Vert agréable */
+    font-weight: bold;
+    font-size: 3rem; /* Taille augmentée */
+}
+
+.nonRendu {
+    color: #d32f2f; /* Rouge agréable */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Titres des items */
+.assignment-item h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+/* Paragraphes des items */
+.assignment-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555; /* Gris pour le texte secondaire */
+}
+
+/* Liens */
+nav a {
+    text-decoration: none;
+    color: inherit; /* Couleur du texte actuelle */
+}
+
+/* Matérial Design Divider */
+mat-divider {
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+
+/* Styles généraux pour les boutons */
+.pagination-btn,
+.ajouterBtn button {
+  background-color: #007bff; /* Couleur de fond bleue */
+  color: white; /* Texte en blanc */
+  border: none; /* Supprime la bordure par défaut */
+  padding: 8px 16px; /* Espacement autour du texte */
+  margin: 5px; /* Marge entre les boutons */
+  border-radius: 4px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en pointeur au survol */
+  transition: background-color 0.3s, transform 0.2s; /* Animation au survol */
+}
+
+/* Effet de survol pour les boutons de pagination et "Ajouter" */
+.pagination-btn:hover,
+.ajouterBtn button:hover {
+  background-color: #0056b3; /* Couleur de fond plus foncée */
+  transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+/* Bouton désactivé */
+.pagination-btn[disabled],
+.ajouterBtn button[disabled] {
+  background-color: #c0c0c0; /* Couleur grise */
+  cursor: not-allowed; /* Curseur de désactivation */
+  opacity: 0.6; /* Opacité réduite */
+}
+
+/* Styles pour les boutons "Première page" et "Dernière page" */
+.pagination-btn:first-of-type,
+.pagination-btn:last-of-type {
+  background-color: #28a745; /* Couleur verte */
+}
+
+.pagination-btn:first-of-type:hover,
+.pagination-btn:last-of-type:hover {
+  background-color: #218838; /* Couleur verte foncée */
+}
+
+/* Styles pour les boutons "Page précédente" et "Page suivante" */
+.pagination-btn:nth-of-type(2),
+.pagination-btn:nth-of-type(4) {
+  background-color: #ffc107; /* Couleur jaune */
+}
+
+.pagination-btn:nth-of-type(2):hover,
+.pagination-btn:nth-of-type(4):hover {
+  background-color: #e0a800; /* Couleur jaune foncée */
+}
+

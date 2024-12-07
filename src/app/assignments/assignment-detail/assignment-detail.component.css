@@ -1,0 +1,74 @@
+/* Carte principale (inchangée) */
+mat-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    width: 90%;
+    font-family: Arial, sans-serif;
+}
+
+/* Titres */
+mat-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+mat-card-subtitle {
+    font-size: 1rem;
+    color: #757575;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Style pour les boutons disponibles */
+button[mat-flat-button], 
+button[mat-strocked_button] {
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    cursor: pointer; /* Curseur pour les boutons actifs */
+}
+
+/* Boutons désactivés */
+button[disabled], button.no-access {
+    background-color: #e0e0e0; /* Gris clair */
+    color: #9e9e9e; /* Texte grisé */
+    border: 2px solid #d6d6d6; /* Bordure gris clair */
+    cursor: not-allowed; /* Indicateur visuel de non-cliquable */
+}
+
+/* Zone d'actions en bas de la carte */
+mat-card-actions#bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Checkbox désactivée */
+mat-checkbox.no-access {
+    color: #9e9e9e; /* Couleur grisée */
+    cursor: not-allowed; /* Indicateur visuel */
+}
+
+/* Contenu désactivé */
+mat-card.disabled {
+    background-color: #f0f0f0; /* Fond légèrement grisé */
+    color: #9e9e9e; /* Texte désactivé */
+    pointer-events: none; /* Désactive toutes les interactions */
+}
+
+/* Ajouter un effet grisé sur le texte */
+.disabled p, 
+.disabled mat-card-title, 
+.disabled mat-card-subtitle {
+    color: #bdbdbd; /* Texte encore plus grisé */
+}

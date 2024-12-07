@@ -1,0 +1,64 @@
+/* Conteneur principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Centre verticalement */
+    background-color: #f5f5f5; /* Couleur de fond douce */
+    padding: 20px; /* Espacement */
+}
+
+/* Style du formulaire */
+form {
+    background: white; /* Fond blanc pour contraste */
+    padding: 30px; /* Espace interne */
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 100%;
+    max-width: 400px; /* Limite la largeur */
+    display: flex;
+    flex-direction: column; /* Aligne les champs en colonne */
+}
+
+/* Champ de formulaire */
+mat-form-field {
+    width: 100%;
+    margin-bottom: 20px; /* Espacement entre les champs */
+}
+
+/* Bouton de connexion */
+button[type="submit"] {
+    padding: 10px 15px; /* Taille confortable */
+    font-size: 16px; /* Texte plus grand */
+    border-radius: 5px; /* Légèrement arrondi */
+    text-transform: uppercase; /* Texte en majuscules */
+    font-weight: bold; /* Texte gras */
+}
+
+/* Message d'erreur */
+.error-message {
+    color: #d32f2f; /* Rouge pour signaler une erreur */
+    margin-top: 15px; /* Espacement par rapport au formulaire */
+    text-align: center;
+    font-size: 14px; /* Taille légèrement plus petite */
+    font-weight: bold;
+}
+
+/* Animation au survol du bouton */
+button[type="submit"]:hover {
+    background-color: #3700b3; /* Couleur plus sombre */
+    transform: scale(1.05); /* Effet d'agrandissement */
+    transition: all 0.3s ease-in-out; /* Animation douce */
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,21 @@
+mat-sidenav-container {
+  height: calc(205vh - 115vh);
+}
+mat-sidenav {
+  width: 275px;
+  background-color: aqua;
+}
+
+.custom-toolbar {
+  background-color: #4CAF50; /* Remplace par la couleur de ton choix */
+  color: white; /* Couleur du texte */
+}
+
+.titre {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 5px;
+  color: #333;
+  color: inherit; /* Couleur du texte actuelle */
+  text-decoration: none; /* Supprime le soulignement des liens */
+}
