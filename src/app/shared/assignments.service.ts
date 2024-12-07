@@ -11,9 +11,11 @@ import { bdInitialAssignments } from './Data';
   providedIn: 'root'
 })
 export class AssignmentsService {
+  
 
   
-  backendURL = "http://localhost:8010/api/assignments";
+  //backendURL = "http://localhost:8010/api/assignments";
+  backendURL = "https://theo-apiangularm1-2024.onrender.com";
 
  /* assignments:Assignment[] = [
     {
