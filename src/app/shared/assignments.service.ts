@@ -15,7 +15,7 @@ export class AssignmentsService {
 
   
   //backendURL = "http://localhost:8010/api/assignments";
-  backendURL = "https://theo-apiangularm1-2024.onrender.com";
+  backendURL = "https://theo-apiangularm1-2024.onrender.com/api/assignments";
 
  /* assignments:Assignment[] = [
     {
